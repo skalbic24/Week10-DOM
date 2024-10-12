@@ -59,7 +59,7 @@ formButton.addEventListener('click', (event) =>{
    } else {
     let fptt = document.getElementById('fpttalert')
     fptt.classList = ("d-show", "alert")
-   }
+   } 
 
 })
 
