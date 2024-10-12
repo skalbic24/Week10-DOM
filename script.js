@@ -22,13 +22,14 @@ const formButton = document.getElementById('formSubmit')
 let number = 0
 
 formButton.addEventListener('click', (event) =>{
-    event.preventDefault()
-   //variables to hold the values of the form
+    event.preventDefault()    //prevents page from refreshing when clicking the button,
+   if(document.getElementById('favoritePlaceToTravel').value != ""){
+    //variables to hold the values of the form, 
+   
     let favoritePlaceToTravel = document.getElementById('favoritePlaceToTravel').value
     let thingToDo = document.getElementById('thingToDo').value
     let mustBringAlong = document.getElementById('mustBringAlong').value
     
-
    //to create a node.. a tr node.. to append to my form
     let newTableRow = document.createElement('tr')
 
@@ -55,6 +56,10 @@ formButton.addEventListener('click', (event) =>{
    document.getElementById('mustBringAlong').value = ''
 
    number++
+   } else {
+    let fptt = document.getElementById('fpttalert')
+    fptt.classList = ("d-show", "alert")
+   }
 
 })
 
